@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dce3e9;
+}
+
+.container {
+    min-height: 600px;
+    width: 900px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 3px 4px 2px #ccc, 4px 5px 2px #ccc;
+    padding: 50px;
+}
+
+.container nav {
+    height: 50px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.container nav ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 20px;
+    border-bottom: 1px solid #000;
+}
+
+.container .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .btn div input {
+    height: 30px;
+    width: 250px;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+}
+
+.container .btn div img {
+    max-width: 15px;
+}
+
+.container .btn div button {
+    height: 40px;
+    width: 150px;
+    background: #2e3336;
+    border: 0;
+    outline: none;
+    color: #fff;
+    box-shadow: 2px 2px 2px #222;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .imageContainer {
+    margin: 10px 0px;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.container .imageContainer div {
+    position: relative;
+}
+
+.container .imageContainer div img {
+    max-width: 250px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.container .imageContainer div .content {
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    color: #fff;
+}
+
+.container .imageContainer div .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 150px;
+    background: rgba(0,0,0,0.5);
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 500px;
+        margin-top: 20px;
+    }
+    .container nav ul {
+        justify-content: center;
+    }
+    .container .btn {
+       flex-direction: column;
+       justify-content: center;
+    }
+
+    .container .btn button {
+        margin-top: 10px;
+    }
+    .container .imageContainer {
+        max-width: 500px;
+    }
+    .container .imageContainer div img{
+        max-width: 200px;
+        margin: 0;
+    }
+    .container .imageContainer div .content {
+       left: 8%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 400px;
+    }
+    .container .btn div input {
+        width: 200px;
+    }
+    .container .imageContainer {
+        max-width: 400px;
+    }
+    .container .imageContainer div img {
+        max-width: 150px;
+        margin: 0;
+    }
+    .container .imageContainer div .content {
+        font-size: 10px;
+    }
+    .container .imageContainer div .content::before {
+        height: 30px;
+        width: 100px;
+    }
+}
+
